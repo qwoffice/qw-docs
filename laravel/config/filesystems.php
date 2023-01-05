@@ -1,21 +1,27 @@
 <?php
 
+/** Default Links **/
 $links = [
     public_path('storage') => storage_path('app/public'),
 ];
 
 if (file_exists(public_path('qwoffice'))) {
+    
+    /** qwoffice root**/
+    $qwoffice_dir_root = resource_path('legacy'); 
+    
+    /** Additional required symlinks **/
     $links = $links + [
-        public_path('assets') => resource_path('legacy/assets'),
-        public_path('glyphicons') => resource_path('legacy/glyphicons'),
-        public_path('qwoffice/bootstrap') => resource_path('legacy/qwoffice/bootstrap'),
-        public_path('qwoffice/css') => resource_path('legacy/qwoffice/css'),
-        public_path('qwoffice/fonts') => resource_path('legacy/qwoffice/fonts'),
-        public_path('qwoffice/js') => resource_path('legacy/qwoffice/js'),
-        public_path('qwoffice/estimates') => resource_path('legacy/qwoffice/estimates'),
-        public_path('qwoffice/static') => resource_path('legacy/qwoffice/static'),
-        public_path('qwoffice/themes') => resource_path('legacy/qwoffice/themes'),
-        public_path('qwoffice/chromeless_35.js') => resource_path('legacy/qwoffice/chromeless_35.js'),
+        public_path('assets') => $qwoffice_dir_root . '/assets',
+        public_path('glyphicons') => $qwoffice_dir_root . '/glyphicons',
+        public_path('qwoffice/bootstrap') => $qwoffice_dir_root . '/qwoffice/bootstrap',
+        public_path('qwoffice/css') => $qwoffice_dir_root . '/qwoffice/css',
+        public_path('qwoffice/fonts') => $qwoffice_dir_root . '/qwoffice/fonts',
+        public_path('qwoffice/js') => $qwoffice_dir_root . '/qwoffice/js',
+        public_path('qwoffice/estimates') => $qwoffice_dir_root . '/qwoffice/estimates',
+        public_path('qwoffice/static') => $qwoffice_dir_root . '/qwoffice/static',
+        public_path('qwoffice/themes') => $qwoffice_dir_root . '/qwoffice/themes',
+        public_path('qwoffice/chromeless_35.js') => $qwoffice_dir_root . '/qwoffice/chromeless_35.js',
     ];
 }
 
