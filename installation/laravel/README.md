@@ -1,6 +1,6 @@
 ### Dependencies
 
-In order to get it working with laravel you need a way to automatically include geacy files based on file based routing 
+In order to get it working with laravel you need a way to automatically include legacy files based on file based routing 
 
 - https://github.com/headerx/laravel-legacy-loader 
 
