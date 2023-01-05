@@ -404,6 +404,9 @@ TESTS_DB_USERNAME=root
 TESTS_DB_PASSWORD=''
 
 COMPANY_LOGO_PATH='office/var/www/qwoffice/print/DigLogo.jpg'
+
+LEGACY_ROUTE_PREFIX=qwoffice
+LEGACY_FILE_PATH=resources/legacy/qwoffice
 ```
 
 get required migrations
