@@ -4,6 +4,8 @@ In order to get it working with laravel you need a way to automatically include 
 
 - https://github.com/headerx/laravel-legacy-loader 
 
+Here is the relevant code:
+
 ```php
 <?php
 
@@ -54,6 +56,21 @@ class LegacyController
     }
 }
 ```
+And route
+
+```php
+
+<?php
+
+use HeaderX\LegacyLoader\Http\Controllers\LegacyController;
+use Illuminate\Support\Facades\Route;
+
+Route::any(config('legacy-loader.route_prefix') . '/{path}', LegacyController::class)
+    ->where('path', '(.*)')
+    ->middleware(config('legacy-loader.middleware'))
+    ->name('legacy');
+```
+
 
 And (requiring jetstream) you can load in iframe to simplify layout
 
